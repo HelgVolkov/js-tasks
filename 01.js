@@ -24,6 +24,8 @@
 	}
  }
 
- let array = ['я', 'умею', 'писать', 'рекурсивные', 'функции'];
+/* let array = ['я', 'умею', 'писать', 'рекурсивные', 'функции'];
 
- consoleRec(array, 0);
+ consoleRec(array, 0);*/
+
+ module.exports = consoleRec;
