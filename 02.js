@@ -14,10 +14,9 @@
  Answer the question:   what state are the doors in after the last pass?   Which are open, which are closed?
 */
 
-let doors = new Array(100000);
+let doors = new Array(100);
 doors.fill(false, 0, doors.length);
 
-console.time('Таймер: ');
 for(let j = 1; j <= doors.length; j++) {
 	for(let i = 0; i < doors.length; i++) {
 
@@ -25,7 +24,6 @@ for(let j = 1; j <= doors.length; j++) {
 		doors[i] = !doors[i];
 	}
 }
-console.timeEnd('Таймер: ');
 
 function countDoors(array, state) {
 	let result = 0;
