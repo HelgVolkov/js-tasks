@@ -12,7 +12,7 @@
 
  Task
  Answer the question:   what state are the doors in after the last pass?   Which are open, which are closed?
-*/
+ */
 
 let doors = new Array(100);
 doors.fill(false, 0, doors.length);
@@ -25,16 +25,12 @@ for(let j = 1; j <= doors.length; j++) {
 	}
 }
 
-function countDoors(array, state) {
-	let result = 0;
+let countOpened = 0,
+	countClosed = 0;
 
-	for(let i = 0; i < array.length; i++) {
-		if(array[i] == state)
-			result++;
-	}
-
-	return result;
+for(let i = 0; i < doors.length; i++) {
+	doors[i] ? countOpened++ : countClosed++;
+	console.log('Дверь № %d %s', i + 1, doors[i] ? 'открыта' : 'закрыта');
 }
-
-console.log('Открытых дверей: ', countDoors(doors, true));
-console.log('Закрытых дверей: ', countDoors(doors, false));
+console.log('\nОткрытых дверей: ', countOpened);
+console.log('Закрытых дверей: ', countClosed);
